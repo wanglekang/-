@@ -1,0 +1,81 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f3f3fe;
+    header {
+        width: 100%;
+        height: pxTorem(44px);
+        flex-shrink: 0;
+        background: #fff;
+    }
+    section {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        margin-top: pxTorem(10px);
+        background: #fff;
+    }
+}
+
+header {
+    ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-size: pxTorem(16px);
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .active {
+        border-bottom: solid pxTorem(2px) blue;
+        color: blue;
+    }
+}
+
+section {
+    padding: 0 pxTorem(10px);
+    @include sizing;
+    dl {
+        width: 100%;
+        height: pxTorem(120px);
+        margin-top: pxTorem(10px);
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #ccc;
+        dt {
+            width: 100%;
+            height: pxTorem(70px);
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        dd {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span {
+                font-size: pxTorem(16px);
+                display: flex;
+                align-items: center;
+                margin-left: pxTorem(20px);
+                img {
+                    width: pxTorem(15px);
+                    height: pxTorem(15px);
+                }
+            }
+        }
+    }
+}
